@@ -3,10 +3,10 @@
 # general inputs
 
 'env'               :   'mjrl_essim-v0',
-'algorithm'         :   'PPO',
+'algorithm'         :   'NPG',
 'seed'              :   123,
 'sample_mode'       :   'trajectories',
-'rl_num_traj'       :   50,
+'rl_num_traj'       :   10,
 'rl_num_iter'       :   500,
 'num_cpu'           :   12,
 'save_freq'         :   50,

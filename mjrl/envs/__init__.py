@@ -8,7 +8,7 @@ from gym.envs.registration import register
 register(
     id='mjrl_essim-v0',
     entry_point='mjrl.envs:EssimEnv',
-    max_episode_steps=700,
+    max_episode_steps=500,
 )
 
 from mjrl.envs.mujoco_env import MujocoEnv
