@@ -6,10 +6,10 @@
 'algorithm'         :   'NPG',
 'seed'              :   123,
 'sample_mode'       :   'trajectories',
-'rl_num_traj'       :   10,
+'rl_num_traj'       :   20,
 'rl_num_iter'       :   500,
 'num_cpu'           :   12,
-'save_freq'         :   50,
+'save_freq'         :   100,
 'eval_rollouts'     :   None,
 'exp_notes'         :   'Example config for training policy with NPG on the mjrl essim task.',
 
