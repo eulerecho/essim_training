@@ -1,6 +1,6 @@
 {
     "env": "mjrl_essim-v0",
-    "algorithm": "NPG",
+    "algorithm": "PPO",
     "seed": 123,
     "sample_mode": "trajectories",
     "rl_num_traj": 20,
