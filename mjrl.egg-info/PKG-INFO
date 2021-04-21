@@ -1,0 +1,17 @@
+Metadata-Version: 1.0
+Name: mjrl
+Version: 1.0.0
+Summary: RL algorithms for environments in MuJoCo
+Home-page: https://github.com/aravindr93/mjrl.git
+Author: Aravind Rajeswaran
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: # Essim RL
+        
+        This package  contains the impletation of RL algorithms on the essim task based on the [mjrl](https://github.com/aravindr93/mjrl/) package.
+        
+        
+        # Credits
+        This package is based on mjrl maintained by [Aravind Rajeswaran](http://homes.cs.washington.edu/~aravraj/) and other members of the [Movement Control Lab,](http://homes.cs.washington.edu/~todorov/) University of Washington Seattle.
+        
+Platform: UNKNOWN
