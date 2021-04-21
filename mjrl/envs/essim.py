@@ -18,7 +18,7 @@ class EssimEnv(mujoco_env.MujocoEnv, utils.EzPickle):
         x_prev,y_prev,z_prev = self.data.qpos[0:3]
         vec = self.data.qpos[0:3] - np.array([-0.015,-0.07,0])
         reward_near = np.linalg.norm(vec) #euclidiean distance
-        action=0.5*a-0.5
+        action=np.clip(a,-1,0)
         self.do_simulation(action, self.frame_skip)
         x_next,y_next,z_next =self.data.qpos[0:3]
         reward_ctrl=np.square(action).sum()
@@ -32,7 +32,7 @@ class EssimEnv(mujoco_env.MujocoEnv, utils.EzPickle):
             done=True
             terminal=1
 
-        reward= -100*reward_near+terminal #penalize distance to goal, velocity and control
+        reward= -reward_near+terminal #penalize distance to goal, velocity and control
 
 
         return ob, reward, done, dict(reward_ctrl=reward_ctrl,reward_near=reward_near)
