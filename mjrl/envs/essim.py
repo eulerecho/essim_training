@@ -15,12 +15,12 @@ class EssimEnv(mujoco_env.MujocoEnv, utils.EzPickle):
 
     def step(self, a):
 
-        x_prev,y_prev,z_prev = self.data.qpos[0:3]
-        vec = self.data.qpos[0:3] - np.array([-0.015,-0.07,0])
+        x_prev,y_prev,z_prev = self.data.qpos[0:3]+np.random.normal(0, 0.001, 3)
+        vec = self.data.qpos[0:3] - np.array([-0.015,-0.07,0])+np.random.normal(0, 0.001, 3)
         reward_near = np.linalg.norm(vec) #euclidiean distance
         action=np.clip(a,-1,0)
         self.do_simulation(action, self.frame_skip)
-        x_next,y_next,z_next =self.data.qpos[0:3]
+        x_next,y_next,z_next =self.data.qpos[0:3]+np.random.normal(0, 0.001, 3)
         reward_ctrl=np.square(action).sum()
         vel=sqrt((x_prev-x_next)**2 + (y_prev-y_next)**2 + (z_prev-z_next)**2)/self.dt
         done=False
